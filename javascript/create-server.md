@@ -4,7 +4,7 @@
 引数である[requestListener](https://www.w3schools.com/nodejs/func_http_requestlistener.asp)はfunction型のコールバック関数
 引数は２つ(request, response)とる
 
-```
+```js
 // httpモジュールを読み込む
 const http = require('http')
 
