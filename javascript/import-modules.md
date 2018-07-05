@@ -5,18 +5,18 @@ ES2015からは import/export が使えるようになります
 外部に公開する関数を定義するには、
 関数の宣言functionの前に export を記述します
 
-```export.js
+```javascript:export.js
 // 外部に公開する関数を定義
 export function add (a ,b) {
-  retuen a + b
+  return a + b
 }
 
-export function mul (a, b) {
+export function mult (a, b) {
   return a * b
 }
 ```
 
-```main.js
+```javascript:main.js
 // 自作の計算モジュールを取り込む
 import {add, mul} from './export.js'
 
@@ -30,13 +30,13 @@ console.log(mul(6, 8)) // 48
 import文はさまざまなバリエーションで記述できます
 上記の例のように、モジュール内の特定の要素だけを取り込む場合は {} で囲みます
 
-```
+```javascript
 import {add, mul} from './export.js'
 ```
 
 モジュールの全ての要素を取り込む場合、[\*]を使います
 
-```
+```javascript
 import * as ex from './export.js'
 ```
 
