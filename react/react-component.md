@@ -20,9 +20,11 @@ class Greeting extends React.Component {
     super(props)
   }
   render() {
-    return <h1>My name is {this.props.name}{this.props.age} years old.</h1>
+    return <h1>My name is {this.props.name},{this.props.age} years old.</h1>
   }
 }
+
+// > My name is Ronaldo,33 years old.
 ```
 
 classに`React.Componet`というReactの基本的なコンポーネントを基底クラスとして継承します
@@ -36,17 +38,20 @@ propsをそのまま渡すだけなら、constructorを定義しなくとも問�
 
 ```js
 function Greeting (props) {
-  return <h1>My name is {this.props.name}{this.props.age} years old.</h1>
+  return <h1>My name is {this.props.name},{this.props.age} years old.</h1>
 }
 
+// > My name is Ronaldo,33 years old.
 ```
 
 ES6のアロー関数を用いると、
 
 ```js
-const Greeting => (props) {
-  return <h1>My name is {this.props.name}{this.props.age} years old.</h1>
-}
+const Greeting = (props) => (
+  return <h1>My name is {this.props.name},{this.props.age} years old.</h1>
+)
+
+// > My name is Ronaldo,33 years old.
 ```
 のように記述できる
 
